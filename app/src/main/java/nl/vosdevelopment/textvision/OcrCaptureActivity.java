@@ -65,12 +65,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
     private CameraSourcePreview mPreview;
     private GraphicOverlay<OcrGraphic> mGraphicOverlay;
 
-    //TODO remove if not needed anymore, which is likely
-    // Helper objects for detecting taps and pinches.
-//    private ScaleGestureDetector scaleGestureDetector;
-    //TODO remove if not needed anymore, which is likely
-//    private GestureDetector gestureDetector;
-
     /**
      * Initializes the UI and creates the detector pipeline.
      */
@@ -98,14 +92,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
         }
 
         Globals.mainActiviy = this;
-
-        //TODO remove if not needed anymore, which is likely
-//        gestureDetector = new GestureDetector(this, new CaptureGestureListener());
-//        scaleGestureDetector = new ScaleGestureDetector(this, new ScaleListener());
-
-//        Snackbar.make(mGraphicOverlay, "Tap to Speak. Pinch/Stretch to zoom",
-//                Snackbar.LENGTH_LONG)
-//                .show();
     }
 
     /**
@@ -139,16 +125,6 @@ public final class OcrCaptureActivity extends AppCompatActivity {
                 .setAction(R.string.ok, listener)
                 .show();
     }
-
-    //TODO remove if not needed anymore, which is likely
-//    @Override
-//    public boolean onTouchEvent(MotionEvent e) {
-//        boolean b = scaleGestureDetector.onTouchEvent(e);
-//
-//        boolean c = gestureDetector.onTouchEvent(e);
-//
-//        return b || c || super.onTouchEvent(e);
-//    }
 
     /**
      * Creates and starts the camera.  Note that this uses a higher resolution in comparison
